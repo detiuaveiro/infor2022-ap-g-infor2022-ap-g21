@@ -1,0 +1,169 @@
+\documentclass{report}
+\usepackage[T1]{fontenc} % Fonts T1
+\usepackage[utf8]{inputenc} % Input UTF8
+\usepackage[backend=biber, style=ieee]{biblatex} % for using bibliography
+\usepackage{csquotes}
+\usepackage[english]{babel} %Using english llanguage
+\usepackage{blindtext} % Generating text automatically
+\usepackage[printonlyused]{acronym}
+\usepackage{hyperref} % for autoref
+\usepackage{graphicx}
+\usepackage{indentfirst}
+
+\bibliography{bibliography}
+
+
+\begin{document}
+%%
+% Definitions
+%
+\def\titledoc{REPORT TITLE}
+\def\datedoc{DATE}
+\def\authors{Author1, Author2}
+\def\authorscontacts{(nmec1) author1@ua.pt, (nmec2) author2@ua.pt}
+\def\version{VERSION}
+\def\department{Dept. de Eletrónica, Telecomunicações e Informática}
+\def\company{Universidade de Aveiro}
+\def\logo{ua.pdf}
+%
+%%%%%% COVER %%%%%%
+%
+\begin{titlepage}
+
+\begin{center}
+%
+\vspace*{50mm}
+%
+{\Huge \titledoc}\\ 
+%
+\vspace{10mm}
+%
+{\Large \company}\\
+%
+\vspace{10mm}
+%
+{\LARGE \authors}\\ 
+%
+\vspace{30mm}
+%
+\begin{figure}[h]
+\center
+\includegraphics{\logo}
+\end{figure}
+%
+\vspace{30mm}
+\end{center}
+%
+\begin{flushright}
+\version
+\end{flushright}
+\end{titlepage}
+
+%%  Title Page %%
+\title{%
+{\Huge\textbf{\titledoc}}\\
+{\Large \department\\ \company}
+}
+%
+\author{%
+    \authors \\
+    \authorscontacts
+}
+%
+\date{\today}
+%
+\maketitle
+
+\pagenumbering{roman}
+
+%%%%%% SUMMARY %%%%%%
+\begin{abstract}
+Summary of 200-300 words.
+\end{abstract}
+
+%%%%%% Acknowledgments %%%%%%
+% According to glisc should appear after conclusions ...
+\renewcommand{\abstractname}{Acknowledgments}
+\begin{abstract}
+Any acknowledgments.
+Comment block if no acknowledgments are due.
+\end{abstract}
+
+
+\tableofcontents
+% \listoftables     % descomentar se necessário
+% \listoffigures    % descomentar se necessário
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introduction}
+\label{chap.intro}
+
+It introduces the theme, presents the motivation and finally the structure.
+
+This document is divided into four chapters.
+After this introduction,
+in \autoref{chap.methods} the methodology followed is presented,
+in \autoref{chap.results} the results obtained are displayed,
+these being discussed in \autoref{chap.analysis}.
+Finally, in \autoref{chap.conclusions}
+the conclusions of the work.
+
+\chapter{Methodology}
+\label{chap.methods}
+Describes the methods used to obtain results.
+
+In this report skeleton, we take advantage of this chapter to exemplify
+how to use some elements {\LaTeX}.
+
+\section{Exempls}
+
+\subsection{Using acronyms}
+This is the first invocation of the acronym \ac{ua}.
+And this is the second one \ac{ua}.
+
+Another reference to \ac{leci}.
+
+\subsection{References}
+Information regarding the formal structure of a report can be obtained
+on the page of \ac{glisc}\cite{glisc}.
+
+\chapter{Results}
+\label{chap.results}
+It describes the results obtained.
+
+\chapter{Analysis}
+\label{chap.analysis}
+Analize the results.
+
+\chapter{Conclusions}
+\label{chap.conclusions}
+Presenting conclusions.
+
+\chapter*{Authors contributions}
+Sumarize here what each author did on the job.
+Use abbreviations to identify authors,
+for example AS for António Silva.
+
+\vspace{10pt}
+\textbf{Indicate the percentage of contribution of each author.}\\
+
+\authors : xx\%, yy\%\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Acronyms}
+\begin{acronym}
+\acro{ua}[UA]{Universidade de Aveiro}
+\acro{leci}[LECI]{Licenciatura em Engenharia de Computadores e Informática}
+\acro{glisc}[GLISC]{Grey Literature International Steering Committee}
+\end{acronym}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\printbibliography
+
+\end{document}
