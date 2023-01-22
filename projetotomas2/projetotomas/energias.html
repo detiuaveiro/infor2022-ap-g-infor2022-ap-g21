@@ -1,0 +1,106 @@
+<html lang="en">
+<style>
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child) {display: none;}
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+    
+    /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {position: relative;}
+      .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
+</style>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energias Renovaveis</title>
+    <link rel="website icon" type="png" href="UA1.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<div class="topnav" id="myTopnav">
+  <a href="index.html" >Home</a>
+  <a href="energias.html" class="active">Energias</a>
+  <a href="contacts.html">Informações</a>
+  <a href="about.html">Acerca De</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<body style="background-color:#94E3FF; ">
+
+  <div class="row">
+    <div class="card col-sm-3">
+      <img src="energiaeolica.jpg" style="height: 230px; width: 370px;" class="card-img-top" alt="Card image cap"/>
+      <div class="card-body">
+        <h5 class="card-title">Energia Eólica</h5>
+        <p class="card-text">A utilização da energia eólica tem-se tornado cada vez mais relevante na transição energética. É uma fonte de energia limpa e renovável, inesgotável e cada vez mais competitiva, com vantagens como a ausência de gases de efeito de estufa e custos associados ao combustível. No entanto, existem limitações, como a variabilidade e imprevisibilidade da força do vento, bem como problemas ambientais.</p>
+      </div>
+    </div>
+    <div class="card col-sm-3">
+      <img src="energiasolar.jpg" style="height: 230px; width: 370px;" class="card-img-top" alt="Card image cap"/>
+      <div class="card-body">
+        <h5 class="card-title">Energia Solar</h5>
+        <p class="card-text">A energia solar é a energia proveniente da luz e do calor do Sol, sendo a
+          que tem menor impacto ambiental. É uma excelente forma de obter energia
+          limpa e sustentável sem danificar o meio ambiente. Atualmente são aplicadas
+          diversas tecnologias de modo a este tipo de energias serem úteis na vida dos seres
+          humanos como é o caso dos painéis solares que são cruciais para o aquecimento
+          da água usada no dia a dia como é o caso de piscinas ou simplesmente para
+          tomar um duche.</p>
+      </div>
+    </div>
+    <div class="card col-sm-3">
+      <img src="energiahidraulica.jpg" style="height: 230px; width: 370px;"  class="card-img-top" alt="Card image cap"/>
+      <div class="card-body">
+        <h5 class="card-title">Energia Hidráulica</h5>
+        <p class="card-text">A energia hidráulica é obtida através da energia da água, ou seja, a forma
+          pela qual esta se manifesta na natureza é nos fluxos de água, como rios e lagos
+          e é também utilizada por meio da queda de água. Pode ser convertida na forma
+          de energia mecânica através de ferramentas desenvolvidas como é o caso de
+          turbinas hidráulicas ou moinhos de água. As turbinas podem ser usadas como
+          acionamento de um equipamento industrial, como um compressor, ou de um
+          gerador elétrico, com a finalidade de prover energia elétrica para uma rede de
+          energia.</p>
+      </div>
+    </div>
+    <div class="card col-sm-3">
+      <img src="energiageotermica.jpg" style="height: 230px; width: 370px;"  class="card-img-top" alt="Card image cap"/>
+      <div class="card-body">
+        <h5 class="card-title">Energia Geotérmica</h5>
+        <p class="card-text">A energia geotérmica, utiliza o calor proveniente do interior da terra, pri-
+          meiro perfura-se em locais com uma grande quantidade de vapor de água acu-
+          mulado por este calor, este irá posteriormente ser levado até à superfície através
+          de tabulagem específica, esta irá girar uma turbina criando energia elétrica. As
+          maiores desvantagens apontadas a esta energia são ser uma energia muito cara
+          e pouco rentável, a emissão de substâncias e calor para a ambiente.</p>
+      </div>
+    </div>
+  </div> 
+  <div class="container-fluid bg-dark text-white fixed-bottom">
+    <div class="row">
+      <div class="col-xs-12">
+        <p class="text-center mb-0">Elaborado no âmbito da unidade curricular de Introdução à Engenharia informática</p>
+      </div>
+    </div>
+  </div>                
+</body>
+ <script src="bar.js"></script> 
+</html>
